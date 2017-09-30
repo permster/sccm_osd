@@ -7,7 +7,7 @@ https://blogs.technet.microsoft.com/system_center_configuration_manager_operatin
 - Create run command line action in your task sequence.
   - Place this action just before your Apply Driver Package section of the task sequence.
   - Command line: dism_wrapper.cmd
-  - Package: the new SCCM package created in step 3
+  - Package: the new SCCM package created above
   
 That's it!  The cmd file will rename X:\Windows\System32\dism.exe to dism2.exe.  Then it copies in the appropriate compiled script as the new X:\Windows\System32\dism.exe.
 
