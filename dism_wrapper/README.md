@@ -5,7 +5,7 @@ https://blogs.technet.microsoft.com/system_center_configuration_manager_operatin
 - Copy both compiled scripts and the dism_wrapper.cmd file into an SCCM package.
 - Create and distribute SCCM package to DPs.
 - Create run command line action
-  - Place this action just ahead of your Apply Driver Package section of the task sequence.
+  - Place this action just before your Apply Driver Package section of the task sequence.
   - Command line: dism_wrapper.cmd
   - Package: the new SCCM package created in step 3
   
