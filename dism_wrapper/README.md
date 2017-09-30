@@ -19,6 +19,6 @@ The script itself flows something like this:
 - Parses out the dism command line parameters that are passed.
 - Gets the path to the drivers.xml file.
 - Gets the (actual) driver path from the drivers.xml using XMLDOM COM object
-  - There's also logic in the script for regex matching (commented out) to get the driver path out of the drivers.xml file but I chose XMLDOM just in case the drivers.xml file isn't always formatted properly.
+  - Note: There's also logic in the script for regex matching (commented out) to get the driver path out of the drivers.xml file but I chose XMLDOM just in case the drivers.xml file isn't always formatted properly.
 - Modifies the dism command line to use /Add-Driver /Driver:
 - And most importantly adds a /Recurse to the command to resolve the issue documented in the blog post.
