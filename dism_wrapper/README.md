@@ -1,7 +1,7 @@
 This is a dism wrapper script to resolve the issue with SCCM OSD documented here:
 https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2016/12/28/apply-driver-package-task-fails-when-the-adk-is-upgrade-to-adk-10-1607/
 
-- Compile au3 script to create AMD64 and x86 versions.
+- Compile dism_wrapper.au3 script to create AMD64 and x86 versions.
 - Copy both compiled scripts and the dism_wrapper.cmd file into an SCCM package.
 - Create and distribute SCCM package to DPs.
 - Create run command line action
