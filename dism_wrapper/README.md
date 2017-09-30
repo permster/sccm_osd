@@ -9,8 +9,11 @@ https://blogs.technet.microsoft.com/system_center_configuration_manager_operatin
   - Command line: dism_wrapper.cmd
   - Package: the new SCCM package created above
   
-That's it!  The cmd file will rename X:\Windows\System32\dism.exe to dism2.exe.  Then it copies in the appropriate compiled script as the new X:\Windows\System32\dism.exe.
+That's it!  The best part is it's just a single run command line action prior to your normal Apply Driver Package actions.  No need for retry if fail groupings and multiple task sequence actions for retry logic.
 
+The cmd file performs the following:
+- Rename X:\Windows\System32\dism.exe to dism2.exe
+- Copy in the appropriate compiled script (based on %processor_architecture%) as the new X:\Windows\System32\dism.exe.
 
 The script itself flows something like this:
 - Parses out the dism command line parameters that are passed.
