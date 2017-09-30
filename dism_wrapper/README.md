@@ -4,7 +4,7 @@ https://blogs.technet.microsoft.com/system_center_configuration_manager_operatin
 - Compile dism_wrapper.au3 script to create AMD64 and x86 versions.
 - Copy both compiled scripts and the dism_wrapper.cmd file into an SCCM package.
 - Create and distribute SCCM package to DPs.
-- Create run command line action
+- Create run command line action in your task sequence.
   - Place this action just before your Apply Driver Package section of the task sequence.
   - Command line: dism_wrapper.cmd
   - Package: the new SCCM package created in step 3
