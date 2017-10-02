@@ -33,7 +33,11 @@ If $CmdLine[0] > 0 Then
 					;parse unattend file for driver path
 					$sDriverPath = GetUnattendDriverPath($sUnattendFile)
 					ConsoleWrite("Driver path: " & $sDriverPath & @CR)
-
+					
+					;strip carriage returns and leading/trailing spaces
+					$sDriverPath = StringStripCR($sDriverPath)
+					$sDriverPath = StringStripWS($sDriverPath, 3)
+					
 					;no driver path found
 					If StringLen($sDriverPath) = 0 Then
 						ConsoleWrite("Empty driver path, copying unattend file to " & @TempDir & @CR)
